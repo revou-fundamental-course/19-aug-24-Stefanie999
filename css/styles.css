@@ -285,6 +285,7 @@ footer {
     .hamburger-menu {
         display: flex;
         flex-direction: row;
+        cursor: pointer;
     }
     .content {
         flex-direction: column;
