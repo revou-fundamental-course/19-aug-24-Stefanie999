@@ -4,72 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eminiaga School</title>
     <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
-    <nav>
-        <header>
+    <!-- Bagian navigasi pada halaman web -->
+    <nav class="navigation-bar">
+        <header class="first-header">
             <div class="logo-icon"></div>
+            <div class="school-name">Eminiaga School</div>
         </header>
 
         <section class="nav-container">
-            <a href="#" class="nav-item">Home</a>
+            <a href="#home" class="nav-item">Home</a>
             <a href="#our-profile" class="nav-item">Our Profile</a>
-            <a href="#" class="nav-item">Achievement</a>
-            <a href="#" class="nav-item">Message Us</a>
+            <a href="#our-facilities" class="nav-item">Our Facilities</a>
+            <a href="#achievement" class="nav-item">Achievement</a>
+            <a href="#message-us" class="nav-item">Message Us</a>
         </section>
+        <div class="hamburger-menu">&#9776</div>
     </nav>
 
-    <hr />
-
+    <!-- Isi dari halaman web -->
     <main>
-        <article>
+        <article id="home">
             <header>
-                <h1>Welcome user, to our website</h1>
+                <!-- Nama sesuai input user di prompt dan di form yang disubmit -->
+                <h1>Hi <span id="nama"></span>! Welcome to our website!</h1>
             </header>
 
-            <p>Lorem ipsum dolor sit amet adipiscing</p>
-
-            <div class="banner-img"></div>
+            <div class="banner">
+                <!-- Penerapan banner autoslide -->
+                <button onclick="plusDivs(-1)" id="prevNext">
+                    <img src="img/previous.png">
+                </button>
+                <div class="banner-img"><img src="img/Classroom.jpg"></div>
+                <div class="banner-img"><img src="img/Auditorium.jpg"></div>
+                <div class="banner-img"><img src="img/Computer Lab.jpg"></div>
+                <button onclick="plusDivs(1)" id="prevNext">
+                    <img src="img/next.png">
+                </button>
+            </div>
         </article>
 
         <hr />
 
+        <!-- Bagian profil -->
         <section id="our-profile">
             <header>
                 <h1>Our Profile</h1>
             </header>
-
             <section class="profile-container">
-                <div class="profile-item">
-                    <div class="profile-img"></div>
+                <div class="profile">
+                    <h2>Tentang Kami</h2>
+                    Eminiaga School merupakan salah satu sekolah swasta di kota Palembang yang berdiri sejak 
+                    tahun 2011. Eminiaga School berlokasi di Jalan Damai Sejahtera No. 5 Palembang dan terdiri 
+                    dari jenjang SMP serta SMA.
+                    <a href="#"><img src="img/Instagram.png" class="contact"></a>
+                    <a href="#"><img src="img/Gmail.png" class="contact"></a>
+                    <a href="#"><img src="img/WhatsApp.png" class="contact"></a>
+                </div>
+                <div class="profile">
+                    <h2>Visi</h2>
+                    Eminiaga School sebagai sekolah yang unggul dalam bidang akademik dan non akademik, 
+                    berkarakter, dan berdaya saing global.
+                </div>
+                <div class="profile">
+                    <h2>Misi</h2>
+                    <ol>
+                        <li>Melaksanakan kegiatan pembelajaran secara efektif, kreatif, dan inovatif</li>
+                        <li>Menanamkan nilai-nilai karakter dan nasionalisme</li>
+                        <li>Mengikuti perkembangan teknologi dan menerapkannya dalam kegiatan sehari-hari</li>
+                        <li>Mendukung pengembangan minat dan bakat siswa-siswi melalui kegiatan ekstrakurikuler</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <hr />
+        
+        <!-- Bagian fasilitas -->
+        <section id="our-facilities">
+            <header>
+                <h1>Our Facilities</h1>
+            </header>
 
-                    <h2>Software Engineer</h2>
+            <section class="facilities-container">
+                <div class="facilities-item">
+                    <h3>Classroom</h3>
                 </div>
 
-                <div class="profile-item">
-                    <div class="profile-img"></div>
-
-                    <h2>Software Engineer</h2>
+                <div class="facilities-item">
+                    <h3>Computer Lab</h3>
                 </div>
 
-                <div class="profile-item">
-                    <div class="profile-img"></div>
+                <div class="facilities-item">
+                    <h3>Auditorium</h3>
+                </div>
 
-                    <h2>Software Engineer</h2>
+                <div class="facilities-item">
+                    <h3>Library</h3>
+                </div>
+
+                <div class="facilities-item">
+                    <h3>Sports Field</h3>
+                </div>
+
+                <div class="facilities-item">
+                    <h3>WiFi</h3>
+                </div>
+
+                <div class="facilities-item">
+                    <h3>Canteen</h3>
                 </div>
             </section>
         </section>
 
-        <section>
-            <form></form>
+        <hr />
+
+        <!-- Bagian achievement -->
+        <section id="achievement">
+            <header>
+                <h1>Achievement</h1>
+            </header>
+
+            <section class="achievement-container">
+                <button class="accordion">2024 (tampilkan)</button>
+                <div class="panel">
+                  <ul>
+                    <li>Juara I Lomba Inovasi Wirausaha UMKM Tingkat Kota Palembang</li>
+                    <li>Juara III Lomba Kreasi Bisnis Digital Remaja Tingkat Provinsi</li>
+                  </ul>
+                </div>
+                
+                <button class="accordion">2023 (tampilkan)</button>
+                <div class="panel">
+                  <ul>
+                    <li>Juara II FLS2N Lomba Menyanyi Solo Tingkat Kota</li>
+                    <li>Juara II KSN Fisika Tingkat Provinsi</li>
+                  </ul>
+                </div>
+                
+                <button class="accordion">2022 (tampilkan)</button>
+                <div class="panel">
+                  <ul>
+                    <li>Juara I KSN Ekonomi Tingkat Provinsi</li>
+                    <li>Juara III Lomba Poster Wirausaha Barang Lokal</li>
+                  </ul>
+                </div>
+            </section>
+        </section>
+
+        <hr />
+
+        <!-- Form -->
+        <section id="message-us">
+            <header>
+                <h1>Message Us</h1>
+            </header>
+            <div class="content">
+                <div class="isi">
+                    <!-- Form yang menerima input user -->
+                    <form method="post" name="message-form" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" size="75%">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tanggal-lahir">Tanggal Lahir</label>
+                            <input type="date" id="tanggal-lahir" name="tanggal-lahir">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Jenis Kelamin</label>
+                            <select id="jenis-kelamin" name="jenis-kelamin">
+                                <option value="Laki-Laki">Laki-Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pesan">Pesan</label>
+                            <textarea id="pesan" name="pesan" placeholder="Pesan"></textarea>
+                        </div>
+                        
+                        <button id="submit" type="submit">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="isi">
+                    <!-- Menampilkan respon yang diterima sesuai dengan input user -->
+                    <div class="kotak">
+                        <h1>Your Response</h1>
+                        <p>Nama : <span id="nama-user"></span></p>
+                        <p>Tanggal Lahir : <span id="tanggal-lahir-user"></span></p>
+                        <p>Jenis Kelamin : <span id="jenis-kelamin-user"></span></p>
+                        <p>Pesan : <span id="pesan-user"></span></p>
+                        <p>(Submmision time : <span id="user-submission-time"></span>)</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>Made by Stefanie</p>
     </footer>
+    <script src="js\script.js"></script>
 </body>
 
 </html>

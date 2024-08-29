@@ -1,55 +1,324 @@
 /* Ini CSS */
+body {
+    margin: 0;
+}
+
+/* Mengubah warna dan ukuran hr */
+hr {
+    border: none;
+    height: 5px;
+    background-color: rgb(241, 255, 207);
+}
+
+/* Bagian navigasi pada website */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    top: 0;
+    background-color: rgb(225, 255, 154);
+    padding: 1.5%;
+}
+
+/* Class .first-header berisi logo dan nama sekolah serta tampilan menyamping dengan flex*/
+.first-header {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
 }
 
 .logo-icon {
-    height: 48px;
-    width: 48px;
-    background-image: url(https://picsum.photos/200);
+    height: 50px;
+    width: 50px;
+    background-image: url('../img/logo.png');
     background-size: cover;
-    border-radius: 50%;
+    padding: auto;
 }
 
+.school-name {
+    align-content: center;
+    text-align: center;
+    margin-left: 1%;
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 10px;
+}
+
+/* Lingkup menu pada nav */
 .nav-container {
     display: flex;
+    margin: 0;
 }
 
+/* Pengaturan untuk masing-masing menu */
 .nav-item {
-    border: 1px solid;
     color: black;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
     padding: 8px;
-    border-radius: 8px;
+    border-bottom: 3px solid rgb(225, 255, 154);
+    background-color: rgb(243, 255, 216);
+    margin: 3px;
 }
 
-.banner-img {
-    border: 1px solid;
-    height: 300px;
-    background-image: url(https://picsum.photos/1000);
-    background-size: cover;
-    background-position: center;
+/* Mengatur style saat mengarahkan kursor ke menu tersebut */
+.nav-item:hover {
+    border-bottom: 3px solid;
 }
 
+/* Menghilangkan icon hamburger menu pada saat screennya luas */
+.hamburger-menu {
+    display: none;
+}
+
+/* Mengatur padding tag h1 yang berada dalam tag header dalam article berID home */
+#home > header > h1 {
+    padding-bottom: 20px;
+}
+
+/* Mengatur img yang berada dalam class banner-img */
+.banner-img img {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Mengatur agar tentang kami, visi, dan misi ditampilkan secara menyamping */
 .profile-container {
     display: flex;
+    flex-direction: row;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    width: auto;
+    padding: 20px;
+    margin: 10px;
+    border-left: 10px solid rgb(154, 154, 154);
+    background-color: rgb(241, 255, 207);
+    text-align: justify;
+}
+
+/* Mengatur ukuran dan padding dari icon seperti Instagram, Gmail, dan WhatsApp */
+.contact{
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+}
+
+/* Mengatur bagian fasilitas */
+.facilities-container {
+    display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
 }
 
-.profile-item {
-    height: 100px;
+.facilities-item {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     text-align: -webkit-center;
-}
-
-.profile-img {
+    background-color: rgb(241, 255, 207);
+    width: 50px;
     height: 50px;
-    background-image: url(https://picsum.photos/250);
+    padding: 35px;
     background-size: cover;
     background-position: center;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.facilities-item > h3 {
+    margin: 110px;
+}
+
+/* Achievement */
+.accordion {
+    background-color: rgb(241, 255, 207);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border: 1px solid rgb(83, 116, 8);
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+/* Mengatur agar ukuran kotak textarea tidak bisa diubah dan mengatur tingginya */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+main > article, main > section {
+    margin: 2%;
+    padding: 10px;
+}
+
+.content {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.isi {
+    display: flex;
+    flex: 1;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 2%;
+}
+
+.kotak {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(83, 116, 8);
+    background-color: rgb(241, 255, 207);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+.form-group > input, .form-group > select, .form-group > textarea {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 3;
+    align-content: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    border: 1px solid rgb(83, 116, 8);
+    border-radius: 5px;
+}
+
+#submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(83, 116, 8);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#prevNext {
+    border: none;
     border-radius: 50%;
-    width: 50px;
+    margin: auto;
+    background-color: transparent;
+    height: 30%;
+}
+
+#prevNext img{
+    height: 30%;
+    width: 30%;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Membuat warna background tombol submit menjadi hijau tua saat mengarahkan kursor ke tombol tersebut */
+button:hover {
+    background-color: rgb(63, 88, 6);
+    cursor: pointer;
+}
+
+/* Mengatur style bagian bawah halaman web */
+footer {
+    text-align: right;
+    background-color: rgb(83, 116, 8);
+    color: white;
+    padding: 0.5% 2% 0.5% 2%;
+}
+
+/* Media Query agar responsive */
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: row;
+    }
+    .nav-container {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .first-header {
+        flex-direction: row;
+    }
+    .hamburger-menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .content {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .school-name {
+        padding: 0;
+    }
+    .profile-container {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .content {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    
+}
+
+@media only screen and (min-width: 992px) {
+    .content {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
 }
