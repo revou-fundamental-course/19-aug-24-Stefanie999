@@ -30,7 +30,7 @@ nav {
 .logo-icon {
     height: 50px;
     width: 50px;
-    background-image: url('../img/logo.png');
+    background-image: url('../assets/Logo.png');
     background-size: cover;
     padding: auto;
 }
